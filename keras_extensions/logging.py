@@ -115,10 +115,11 @@ class log_to_file(object):
             sys.stderr = logger
 
             # call original function
-            original_func(*args, **kwargs)
+            result = original_func(*args, **kwargs)
 
             # restore original stdout, stderr
             sys.stdout = old_stdout
             sys.stderr = old_stderr
+            return result
         return wrapped
 
