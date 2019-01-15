@@ -2,7 +2,7 @@ from __future__ import division
 
 import numpy as np
 
-from keras import  initializations, regularizers, constraints
+from keras import  initializers, regularizers, constraints
 from keras import backend as K 
 from keras.layers.core import Layer, Dense
 
