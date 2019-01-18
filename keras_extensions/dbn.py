@@ -67,7 +67,7 @@ class DBN(object):
 
     def greedy_layerwise_train(self,layer_no, X, batch_size=128, nb_epoch=100, verbose=1, shuffle="batch"):
 
-        print ">>>",layer_no
+        print(">>>",layer_no)
         '''
         if layer_no !=0:
             pre_model = Sequential()
