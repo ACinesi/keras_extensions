@@ -8,7 +8,7 @@ class SingleLayerUnsupervised(Model, containers.Sequential):
     
     #FIX
     def standardize_X(X):
-    if type(X) == list:
+    if(type(X) == list):
         return X
     else:
         return [X]
