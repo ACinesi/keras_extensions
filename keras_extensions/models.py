@@ -5,16 +5,17 @@ from keras import optimizers, objectives
 from keras import backend as K
 
 class SingleLayerUnsupervised(Model, containers.Sequential):
-    
-    #FIX
-    def standardize_X(X):
-    if(type(X) == list):
-        return X
-    else:
-        return [X]
     """
     Single layer unsupervised learning Model.
     """
+        
+    #FIX
+    def standardize_X(X):
+        if(type(X) == list):
+            return X
+        else:
+            return [X]
+    
     # add Layer, adapted from keras.layers.containers.Sequential
     def add(self, layer):
         if len(self.layers) > 0:
