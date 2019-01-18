@@ -1,3 +1,4 @@
+#from keras.models import Model, standardize_X FIX
 from keras.models import Model
 from keras.layers import containers
 from keras import optimizers, objectives
@@ -5,6 +6,7 @@ from keras import backend as K
 
 class SingleLayerUnsupervised(Model, containers.Sequential):
     
+    #FIX
     def standardize_X(X):
     if type(X) == list:
         return X
