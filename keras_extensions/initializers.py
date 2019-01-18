@@ -1,5 +1,5 @@
 import numpy as np
-from keras.initializations import get_fans, uniform
+from keras.initializers import get_fans, uniform
 
 def glorot_uniform_sigm(shape):
     """
