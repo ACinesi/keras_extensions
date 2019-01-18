@@ -1,9 +1,15 @@
-from keras.models import Model, standardize_X
+from keras.models import Model
 from keras.layers import containers
 from keras import optimizers, objectives
 from keras import backend as K
 
 class SingleLayerUnsupervised(Model, containers.Sequential):
+    
+    def standardize_X(X):
+    if type(X) == list:
+        return X
+    else:
+        return [X]
     """
     Single layer unsupervised learning Model.
     """
